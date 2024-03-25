@@ -6,14 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="grade">
-        <div class="grade-data">
-            <div class="element">Result:</div>
-            <div class="element"><input name="grades" id="grades" type="number">
+    <form class="input-grade">
+        <div class="g-data">
+            <div class="element">Enter Marks:</div>
+            <div class="element"><input name="marks" id="marks" type="number">
         </div>
         <div class="print-button">
-        <input type="button" value="Grade" onclick="display();">
-        <input type="reset" value="Reset">  
+        <input type="button" value="Grade" onclick="printGrades();">
+        <input type="reset" value="Reset"> 
+        <div class="grade-result">
+            <div class="element">Result</div>
+            <div class="element"><input name="result" id="result" type="text" readonly=""></div>		
+        </div>
+        </div>
+    </form>
+    <form class="input-speed">
+        <div class="s-data">
+            <div class="element">Speed(Km/hr):</div>
+            <div class="element"><input name="speed" id="speed" type="number">
+        </div>
+        <div class="speed-button">
+        <input type="button" value="speed" onclick="display();">
+        <input type="reset" value="Reset"> 
+        <div class="calculate-demerits">
+            <div class="element">Points</div>
+            <div class="element"><input name="demerit" id="demerit" type="text" readonly=""></div>		
+        </div>
         </div>
     </form>
     <form class="calculator">

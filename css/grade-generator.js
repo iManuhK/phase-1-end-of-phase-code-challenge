@@ -1,5 +1,5 @@
 //function declaration for print grades function
-function printgrades(marks) {
+function printGrades(marks) {
 //introduce conditional statement to check for marks between 0 and 100
 if (marks >=0 && marks < 40) {
     console.log("E")
