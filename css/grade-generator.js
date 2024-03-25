@@ -1,5 +1,7 @@
+//function declaration for print grades function
 function printgrades(marks) {
-    if (marks >=0 && marks < 40) {
+//introduce conditional statement to check for marks between 0 and 100
+if (marks >=0 && marks < 40) {
     console.log("E")
   }
   if (marks >=40 && marks <49) {
@@ -14,8 +16,10 @@ function printgrades(marks) {
   if (marks >79 && marks <=100) {
             console.log("A")
   }
+  //Last statement to catch anything outside of 0 - 100 marks
   if (marks <0 || marks > 100) {
   console.log("Number out of range!!")
   }
   }
+ // function call with marks argument
   printgrades(-1)

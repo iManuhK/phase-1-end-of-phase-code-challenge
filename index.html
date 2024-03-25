@@ -6,6 +6,63 @@
     <title>Document</title>
 </head>
 <body>
+    <form class="grade">
+        <div class="grade-data">
+            <div class="element">Result:</div>
+            <div class="element"><input name="grades" id="grades" type="number">
+        </div>
+        <div class="print-button">
+        <input type="button" value="Grade" onclick="display();">
+        <input type="reset" value="Reset">  
+        </div>
+    </form>
+    <form class="calculator">
+        <div class="c-data">
+            <div class="element">Basic Salary:</div>
+            <div class="element"><input name="salary" id="salary" type="text" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"></div>
+        </div>
+        <div class="c-data">
+            <div class="element">Benefits: <sup>(Allowances)</sup></div>
+            <div class="element"><input name="benefits" id="benefits" type="text"></div>
+        </div>
+    
+        <div class="c-button">
+        <input type="button" value="Calculate" onclick="calc();">
+        <input type="reset" value="Reset">  
+        </div>
+        <div class="c-result">
+            <div class="element" id="c-error">Please Enter Amount</div>			
+        </div>
+        <div class="c-result">
+            <div class="element">Housing Levy Fund</div>
+            <div class="element"><input name="housing" id="housing" type="text" readonly=""></div>		
+        </div>
+        <div class="c-result">
+            <div class="element">NSSF Contribution</div>
+            <div class="element"><input name="nssf" id="nssf" type="text" readonly=""></div>		
+        </div>
+        <div class="c-result">
+            <div class="element">Taxable Income</div>
+            <div class="element"><input name="taxable" id="taxable" type="text" readonly=""></div>		
+        </div>
+        <div class="c-result">
+            <div class="element">Personal Relief</div>
+            <div class="element"><input name="relief" id="relief" type="text" readonly=""></div>		
+        </div>
+        <div class="c-result">
+            <div class="element">PAYE</div>
+            <div class="element"><input name="paye" id="paye" type="text" readonly=""></div>		
+        </div>
+        <div class="c-result">
+            <div class="element">NHIF Contribution</div>
+            <div class="element"><input name="nhif" id="nhif" type="text" readonly=""></div>		
+        </div>
+        <div class="c-result">
+            <div class="element">Net Pay</div>
+            <div class="element"><input name="net" id="net" type="text" readonly=""></div>		
+        </div>
+    
+    </form>
     <script type="text/javascript" src="./css/grade-generator.js"></script>
     <script type="text/javascript" src="./css/speed-detector.js"></script>
     <script type="text/javascript" src="./css/net-salary-calculator.js" ></script>
