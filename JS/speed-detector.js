@@ -9,7 +9,7 @@ function calculateDemerit(speed){
 //alternate statement to calculate deduction points for speed more than speed limit and points more than 12
 //five km/hr equal 1 point
     else if(((speed-limit)/5)>12){
-        return `License suspended`
+        return `Points:` + (speed-limit)/5 +`:- License suspended`
      }
 //last statement to catch speeds more than the limit but calculated points less than 12   
     else {

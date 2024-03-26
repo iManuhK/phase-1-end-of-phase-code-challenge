@@ -10,7 +10,6 @@ In this document are three functions that take in some user input and calculates
 ## SetUp Instruction
 ### Requirements
 * [HTML](html.com)
-* [css](Framework URL)
 * Text editor eg [Visual Studio Code](https://code.visualstudio.com/download)
 
 
@@ -30,9 +29,6 @@ In this document are three functions that take in some user input and calculates
 > Run using live server
 *****
 ## Dependencies
-- Google fonts
-- Font awesome Icons
-- Particles JS
 - [calculator.co.ke](https://calculator.co.ke/kra-paye-calculator/)
 *****
 ## Technologies Used
