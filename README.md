@@ -1,7 +1,10 @@
+## Version
+version 2.0 <<edited on 30th March>>
 ## Title
 Code challenge Wk :1 Toy Problems
 *****
 ### Author : Emmanuel Rotich March 23rd 2024
+
 ****
 ## Description
 In this document are three functions that take in some user input and calculates or inteprets using function arguments.
@@ -11,7 +14,6 @@ In this document are three functions that take in some user input and calculates
 ### Requirements
 * [HTML](html.com)
 * Text editor eg [Visual Studio Code](https://code.visualstudio.com/download)
-
 
 ### Getting Files
 * Fork the repo
@@ -30,11 +32,11 @@ In this document are three functions that take in some user input and calculates
 *****
 ## Dependencies
 - [calculator.co.ke](https://calculator.co.ke/kra-paye-calculator/)
+- [https://www.aren.co.ke/calculators/deducalc.php](https://www.aren.co.ke/calculators/deducalc.php)
 *****
 ## Technologies Used
 1. HTML
-2. CSS
-3. JavaScript
+2. JavaScript
 *****
 ## Contact Information
 * Email : emmanuel.rotich@moringaschool.com
