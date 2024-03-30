@@ -14,18 +14,18 @@ function calculateHousingLevy(gross){
 function calculateNSSF(gross){
   let NSSF;
     if(gross >= 0 && gross <= 6000){
-      let tier1		= gross * 0.12;
+      let tier1		= gross * (0.06+0.06);
       let tier2		= 0;
       return NSSF 		= parseFloat(tier1) + parseFloat(tier2);
       }
     else if(gross >= 6001 && gross <= 18000 ){
-      let tier1		= 6000 * 0.12;
-      let tier2		= (gross - 6000) * 0.12;
+      let tier1		= 6000 * (0.06+0.06);
+      let tier2		= (gross - 6000) * (0.06+0.06);
       return NSSF	= parseFloat(tier1) + parseFloat(tier2);		
       }
     else if(gross > 18000 ){
-      let tier1		= 6000 * 0.12;
-      let tier2		= 12000 * 0.12;
+      let tier1		= 6000 * (0.06+0.06);
+      let tier2		= 12000 * (0.06+0.06);
       return NSSF		= parseFloat(tier1) + parseFloat(tier2);
       }
 }
@@ -34,15 +34,22 @@ let taxableIncome = gross - calculateNSSF(gross)
 function calculatePAYE(taxableIncome){
     let taxPayable = 0
     let personalRelief = 2400
-    let insuranceRelief = 255
-//Affordable housing relief is at 15% and capped at 9000
-    let AffordableHousingRelief 
-    if (calculateHousingLevy(gross) <= 9000){
-      AffordableHousingRelief= (15/100)*calculateHousingLevy(gross);
+//insurance relief is 15% of (NHIF+Insurance premiums) but will not exceed 5000 p.m    
+    let insuranceRelief
+      if (calculateNHIF(gross) <= 5000){
+        insuranceRelief= (15/100)*calculateNHIF(gross);
+      }
+      else {
+      insuranceRelief = 5000
     }
-    else {
-     AffordableHousingRelief = 9000
-    }
+//Affordable housing relief is at 15% and capped at 9000 p.m
+    let affordableHousingRelief 
+      if (calculateHousingLevy(gross) <= 9000){
+        affordableHousingRelief= (15/100)*calculateHousingLevy(gross);
+      }
+      else {
+      affordableHousingRelief = 9000
+      }
     let PAYE = 0
     
     if(taxableIncome >= 0 && taxableIncome <= 24000){
@@ -86,7 +93,7 @@ function calculatePAYE(taxableIncome){
         let tax_bracket_35 = (taxableIncome - 800000) / 100 * tax_rate;
         taxPayable			   = parseFloat(tax_bracket_10) + parseFloat(tax_bracket_25) + parseFloat(tax_bracket_30) + parseFloat(tax_bracket_32) + parseFloat(tax_bracket_35);
  }
-    return PAYE = taxPayable -(personalRelief+insuranceRelief+AffordableHousingRelief)
+    return PAYE = taxPayable -(personalRelief+insuranceRelief+affordableHousingRelief)
 }
 
 //function to determine the NHIF deduction - which is deducted from Net pay 
